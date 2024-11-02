@@ -88,3 +88,43 @@ const sortCars = (carsArray) => {
 const sortCarsByYear = sortCars(cars);
 
 // console.log(sortCarsByYear);
+
+
+
+
+
+
+
+
+
+
+// 5.Task: Find and Modify
+
+// Write a function that searches an array of objects for a specific person by name.If found, modify their age property.Print the updated array.
+
+
+
+
+const allPeoples = [
+    { name: "Mir vai", age: 25, gender: "male" },
+    { name: "jhankar vai", age: 30, gender: "male" },
+    { name: "rakib vai", age: 30, gender: "male" },
+    { name: "shejuthi apu", age: 27, gender: "female" },
+    { name: "nargis apu", age: 20, gender: "female" },
+    { name: "Tasnuva  apu", age: 26, gender: "female" }
+];
+
+
+
+const modifyAgeByName = (arrayOfPeoples, name, newAge) => {
+    const findThePersonByName = arrayOfPeoples.find((people) => people.name === name);
+    if (findThePersonByName) {
+        findThePersonByName.age = newAge
+    }
+    return arrayOfPeoples;
+};
+
+
+const modifiedOutput = modifyAgeByName(allPeoples, "Tasnuva  apu", 27);
+
+console.log(modifiedOutput);
