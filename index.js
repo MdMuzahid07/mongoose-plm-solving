@@ -3,20 +3,20 @@
 // Create an array of objects, each representing a person with properties like name, age, and gender.Write a function to filter out all females and then map the remaining people to an array of names.Print the final result.
 
 
-// const peoples = [
-//     { name: "Mir vai", age: 25, gender: "male" },
-//     { name: "jhankar vai", age: 30, gender: "male" },
-//     { name: "rakib vai", age: 30, gender: "male" },
-//     { name: "shejuthi apu", age: 27, gender: "female" },
-//     { name: "nargis apu", age: 20, gender: "female" },
-//     { name: "Tasnuva  apu", age: 26, gender: "female" }
-// ];
+const peoples = [
+    { name: "Mir vai", age: 25, gender: "male" },
+    { name: "jhankar vai", age: 30, gender: "male" },
+    { name: "rakib vai", age: 30, gender: "male" },
+    { name: "shejuthi apu", age: 27, gender: "female" },
+    { name: "nargis apu", age: 20, gender: "female" },
+    { name: "Tasnuva  apu", age: 26, gender: "female" }
+];
 
-// const filterAndMapNames = (arrOfPeoples) => {
-//     return arrOfPeoples.filter(person => person.gender === "male").map(person => person.name);
-// };
+const filterAndMapNames = (arrOfPeoples) => {
+    return arrOfPeoples.filter(person => person.gender === "male").map(person => person.name);
+};
 
-// const remaining = filterAndMapNames(peoples);
+const remaining = filterAndMapNames(peoples);
 
 // console.log(remaining);
 
@@ -43,4 +43,21 @@ const bookTitles = (booksArray) => {
 };
 
 const getTitles = bookTitles(books)
-console.log(getTitles);
+// console.log(getTitles);
+
+
+
+// 3.Task: Function Composition
+
+// Write three functions: one to square a number, one to double a number, and one to add 5 to a number.Compose these functions to create a new function that squares a number, doubles the result, and then adds 5.
+
+
+const square = num => num * num;
+const double = num => num * 2;
+const addFive = num => num + 5;
+
+const composedFunction = (num) => addFive(double(square(num)));
+
+
+const output = composedFunction(5);
+console.log(output); 
